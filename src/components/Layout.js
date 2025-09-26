@@ -15,6 +15,10 @@ const Layout = ({ children }) => {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       {/* SA Global Website Created By Xapner.com - https://xapner.com */}
@@ -31,7 +35,12 @@ const Layout = ({ children }) => {
               </span> */}
               <span className="flex items-center space-x-2 text-white font-medium">
                 <span>✉️</span>
-                <span className="text-xs sm:text-sm break-all">{content.contactInfo.email}</span>
+                <a 
+                  href={`mailto:${content.contactInfo.email}`}
+                  className="text-xs sm:text-sm break-all hover:underline transition-colors duration-300"
+                >
+                  {content.contactInfo.email}
+                </a>
               </span>
             </div>
             <div className="hidden sm:block text-white font-medium text-xs lg:text-sm">
@@ -339,10 +348,10 @@ const Layout = ({ children }) => {
             <div className="text-center md:text-left">
               <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={closeMobileMenu}>About Us</Link></li>
-                <li><Link to="/services" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={closeMobileMenu}>Our Services</Link></li>
-                <li><Link to="/universities" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={closeMobileMenu}>Universities</Link></li>
-                <li><Link to="/blog" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={closeMobileMenu}>Blog</Link></li>
+                <li><Link to="/about" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>About Us</Link></li>
+                <li><Link to="/services" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>Our Services</Link></li>
+                <li><Link to="/universities" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>Universities</Link></li>
+                <li><Link to="/blog" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>Blog</Link></li>
               </ul>
             </div>
             
@@ -350,10 +359,10 @@ const Layout = ({ children }) => {
             <div className="text-center md:text-left">
               <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
               <ul className="space-y-2">
-                <li><span className="text-gray-200">University Selection</span></li>
-                <li><span className="text-gray-200">Visa Assistance</span></li>
-                <li><span className="text-gray-200">Student Counseling</span></li>
-                <li><span className="text-gray-200">Accommodation Help</span></li>
+                <li><Link to="/services" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>University Selection</Link></li>
+                <li><Link to="/services" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>Visa Assistance</Link></li>
+                <li><Link to="/services" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>Student Counseling</Link></li>
+                <li><Link to="/services" className="text-gray-200 hover:text-white transition-colors duration-300" onClick={() => { closeMobileMenu(); scrollToTop(); }}>Accommodation Help</Link></li>
               </ul>
             </div>
             
@@ -362,7 +371,14 @@ const Layout = ({ children }) => {
               <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
               <div className="space-y-2 text-gray-200">
                 {/* <p className="break-words">{content.contactInfo.phone}</p> */}
-                <p className="break-words">{content.contactInfo.email}</p>
+                <p className="break-words">
+                  <a 
+                    href={`mailto:${content.contactInfo.email}`}
+                    className="text-gray-200 hover:text-white transition-colors duration-300 hover:underline"
+                  >
+                    {content.contactInfo.email}
+                  </a>
+                </p>
                 <p className="break-words">{content.contactInfo.address}</p>
               </div>
             </div>

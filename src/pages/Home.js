@@ -590,7 +590,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-100 py-16 lg:py-20">
+      <section id="testimonials" className="bg-gray-100 py-16 lg:py-20">
         <div className="container-custom">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">

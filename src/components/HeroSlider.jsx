@@ -60,18 +60,48 @@ const HeroSlider = () => {
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Link
-                        to="/universities"
-                        className="btn btn-primary btn-large hover-glow"
-                      >
-                        {slide.button1}
-                      </Link>
-                      <Link
-                        to="/contact"
-                        className="btn btn-secondary btn-large hover-glow"
-                      >
-                        {slide.button2}
-                      </Link>
+                      {slide.button1 === "Success Stories" ? (
+                        <button
+                          onClick={() => {
+                            const testimonialsSection = document.getElementById('testimonials');
+                            if (testimonialsSection) {
+                              testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
+                          className="btn btn-primary btn-large hover-glow"
+                        >
+                          {slide.button1}
+                        </button>
+                      ) : slide.button1 === "Start Planning" ? (
+                        <Link
+                          to="/services"
+                          className="btn btn-primary btn-large hover-glow"
+                        >
+                          {slide.button1}
+                        </Link>
+                      ) : (
+                        <Link
+                          to="/universities"
+                          className="btn btn-primary btn-large hover-glow"
+                        >
+                          {slide.button1}
+                        </Link>
+                      )}
+                      {slide.button2 === "Get Consultation" ? (
+                        <Link
+                          to="/contact"
+                          className="btn btn-secondary btn-large hover-glow"
+                        >
+                          {slide.button2}
+                        </Link>
+                      ) : (
+                        <Link
+                          to="/universities"
+                          className="btn btn-secondary btn-large hover-glow"
+                        >
+                          {slide.button2}
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
