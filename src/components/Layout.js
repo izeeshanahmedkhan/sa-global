@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
                 <img 
                   src={logo} 
                   alt="SA Global Logo" 
-                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
+                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain pt-1"
                   style={{
                     objectFit: 'contain',
                     objectPosition: 'center',
