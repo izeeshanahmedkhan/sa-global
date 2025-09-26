@@ -176,7 +176,7 @@ const Home = () => {
                         <img 
                           src={universityLogos[university.logo] || universityLogos['cardiff-logo']} 
                           alt={`${university.name} Logo`}
-                          className="h-28 w-auto object-contain"
+                          className="h-28 w-auto object-contain filter brightness-0 invert"
                         />
                       </div>
                     </div>
@@ -220,7 +220,7 @@ const Home = () => {
                         <img 
                           src={universityLogos[university.logo] || universityLogos['cardiff-logo']} 
                           alt={`${university.name} Logo`}
-                          className="h-28 w-auto object-contain"
+                          className="h-28 w-auto object-contain filter brightness-0 invert"
                         />
                       </div>
                     </div>
@@ -264,7 +264,7 @@ const Home = () => {
                         <img 
                           src={universityLogos[university.logo] || universityLogos['cardiff-logo']} 
                           alt={`${university.name} Logo`}
-                          className="h-28 w-auto object-contain"
+                          className="h-28 w-auto object-contain filter brightness-0 invert"
                         />
                       </div>
                     </div>
