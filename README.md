@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+# SA Global - Study Abroad Consultant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for SA Global Study Abroad Consultant services.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎓 **Study Abroad Services**: Comprehensive information about study abroad opportunities
+- 🌍 **Destination Guide**: 7 major study destinations (Canada, USA, Ireland, New Zealand, Singapore, UK, UAE)
+- 🏫 **University Partners**: Information about partner universities and institutions
+- 📱 **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
+- 🎨 **Modern UI**: Clean, professional design with smooth animations
+- ⚡ **Performance Optimized**: Fast loading with optimized assets
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19.1.1
+- **Routing**: React Router DOM 7.9.1
+- **Styling**: Tailwind CSS 3.4.17
+- **Build Tool**: Create React App
+- **Email Service**: EmailJS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v16 or higher)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd sa-global
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start development server
+```bash
+npm start
+```
 
-### `npm run eject`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Production Build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This builds the app for production to the `build` folder and automatically organizes the files into a clean structure.
 
-## Learn More
+### Organized Build Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build process automatically organizes files into a clean structure:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+build/
+├── assets/
+│   ├── icons/           # Favicons and app icons
+│   ├── logos/           # Company logos
+│   ├── university-logos/ # University partner logos
+│   ├── partner-images/  # Partner company images
+│   └── university-images/ # University images
+├── config/              # Configuration files
+├── static/              # CSS, JS, and media files
+└── index.html           # Main HTML file
+```
 
-### Code Splitting
+### Build Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `npm run build` - Build and organize files automatically
+- `npm run build:clean` - Build without organization (raw build)
+- `npm run build:production` - Production build without source maps
+- `npm run organize` - Organize existing build folder
+- `npm run build:structure` - Display organized build structure
+- `npm run serve` - Serve production build locally
 
-### Analyzing the Bundle Size
+### Serve Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run serve
+```
 
-### Making a Progressive Web App
+This serves the production build locally on port 3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
+The app is ready for deployment to any static hosting service:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Netlify**: Drag and drop the `build` folder
+- **Vercel**: Connect your GitHub repository
+- **GitHub Pages**: Use GitHub Actions or deploy manually
+- **AWS S3**: Upload the `build` folder contents
 
-### Deployment
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+src/
+├── components/          # Reusable React components
+│   ├── Layout.js       # Main layout component
+│   ├── HeroSlider.jsx  # Hero section carousel
+│   └── BlogPost.js     # Blog post component
+├── pages/              # Page components
+│   ├── Home.js         # Homepage
+│   ├── About.js        # About page
+│   ├── Services.js     # Services page
+│   ├── Universities.js # Universities page
+│   ├── Blog.js         # Blog page
+│   └── Contact.js      # Contact page
+├── assets/             # Static assets
+│   ├── content.js      # Website content data
+│   ├── imageLinks.js   # Image imports and exports
+│   └── images/         # Image assets
+├── App.js              # Main app component
+├── App.css             # Global styles
+└── index.js            # App entry point
+```
 
-### `npm run build` fails to minify
+## Features Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Homepage Sections
+- **Hero Carousel**: Dynamic slides with call-to-action
+- **Study Abroad Consultants**: 7 destination countries in seamless grid
+- **University Recommendations**: Endless carousel with swipe controls
+- **Partners Universities**: Partner institutions showcase
+- **Our Partners**: Educational partner logos
+- **Services Overview**: Key services offered
+- **Why Choose Us**: Benefits and features
+- **Blog Preview**: Latest articles and insights
+
+### Responsive Design
+- **Mobile First**: Optimized for mobile devices
+- **Tablet Friendly**: Adapted layouts for tablet screens
+- **Desktop Enhanced**: Full features on desktop screens
+- **Touch Support**: Swipe controls for carousels
+
+### Performance Features
+- **Optimized Images**: Compressed and properly sized images
+- **Lazy Loading**: Images load as needed
+- **Code Splitting**: Automatic code splitting for faster loading
+- **SEO Optimized**: Meta tags and structured data
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under UNLICENSED - all rights reserved.
+
+## Support
+
+For support and inquiries, please contact SA Global through the website contact form.
+
+---
+
+**SA Global** - Your trusted partner in international education.

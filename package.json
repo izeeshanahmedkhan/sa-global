@@ -1,22 +1,31 @@
 {
   "name": "sa-global",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node scripts/organize-build.js",
+    "build:clean": "react-scripts build",
+    "build:production": "GENERATE_SOURCEMAP=false react-scripts build && node scripts/organize-build.js",
+    "organize": "node scripts/organize-build.js",
+    "organize:powershell": "powershell -ExecutionPolicy Bypass -File scripts/organize-build.ps1",
+    "build:structure": "node scripts/show-build-structure.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build -l 3000"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +44,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  },
+  "description": "SA Global - Study Abroad Consultant Website",
+  "keywords": [
+    "study-abroad",
+    "education-consultancy",
+    "university-admissions",
+    "visa-services",
+    "international-education"
+  ],
+  "author": "SA Global",
+  "license": "UNLICENSED"
 }
