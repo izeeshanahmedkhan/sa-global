@@ -87,7 +87,7 @@ const logoWhiteImage = '/logo-white.png';
 
 // University logos - Using actual SVG files from organized build structure
 const cardiffLogo = '/assets/university-logos/cardiff-logo.svg';
-const ueaLogo = '/assets/university-logos/cardiff-logo.svg'; // Using Cardiff SVG for UEA
+const ueaLogo = '/UEA-logo.svg'; // Using actual UEA logo
 const nottinghamLogo = '/assets/university-logos/Nottingham-logo.svg';
 const sussexLogo = '/assets/university-logos/brunel-logo.svg'; // Using Brunel SVG for Sussex
 const birminghamLogo = '/assets/university-logos/Birmingham-logo.svg';
