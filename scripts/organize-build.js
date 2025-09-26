@@ -6,7 +6,7 @@ const buildDir = path.join(__dirname, '..', 'build');
 // Create organized directory structure
 const directories = {
   'assets/icons': ['favicon.ico', 'favicon.png', 'favicon-16x16.png', 'apple-touch-icon.png'],
-  'assets/logos': ['logo.png', 'logo192.png', 'logo512.png'],
+  'assets/logos': ['logo.png', 'logo192.png', 'logo512.png', 'logo-200.png', 'logo-white.png'],
   'assets/university-logos': [
     'Birmingham-logo.svg',
     'birmingham-university-logo.svg',
@@ -15,7 +15,8 @@ const directories = {
     'cardiff-university-logo.svg',
     'Nottingham-logo.svg',
     'nottingham-university-logo.svg',
-    'sussex-university-logo.svg'
+    'sussex-university-logo.svg',
+    'UEA-logo.svg'
   ],
   'assets/partner-images': [
     'partners-1.webp',
