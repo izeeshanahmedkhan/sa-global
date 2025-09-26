@@ -1,13 +1,8 @@
 // Image imports and links for SA Global
 
-// Import logo
-import logoImage from './images/logo-200.png';
-import logoWhiteImage from './images/logo-white.png';
-
 // Import hero images
 import aboutHeroImage from './images/about/about-hero.jpg';
 import blogHeroImage from './images/blog/blog-hero.jpg';
-
 
 // Import blog post images
 import engineeringUniversitiesImage from './images/blog-posts/engineering-universities.jpg';
@@ -44,7 +39,6 @@ import guidanceImage from './images/guidance/guidance-image.jpg';
 import heroSlider1 from './images/hero/slider-1.jpg';
 import heroSlider2 from './images/hero/slider-2.jpg';
 import heroSlider3 from './images/hero/slider-3.jpg';
-
 
 // Import university recommendation images - M.R. Consultants actual images
 import cardiffImage from './images/sections/universities/actual/UKTower.webp';
@@ -87,19 +81,21 @@ import royalHollowayColoredLogo from './images/sections/universities/logos/royal
 import curtinColoredLogo from './images/sections/universities/logos/curtin-logo.webp';
 import deakinColoredLogo from './images/sections/universities/logos/deakin-logo.webp';
 
-// University logos - Using actual SVG files from public directory, reusing available SVGs for missing ones
-const cardiffLogo = '/cardiff-logo.svg';
-const ueaLogo = '/cardiff-logo.svg'; // Using Cardiff SVG for UEA
-const nottinghamLogo = '/Nottingham-logo.svg';
-const sussexLogo = '/brunel-logo.svg'; // Using Brunel SVG for Sussex
-const birminghamLogo = '/Birmingham-logo.svg';
-const queenMaryLogo = '/brunel-logo.svg'; // Using Brunel SVG for Queen Mary
-const royalHollowayLogo = '/cardiff-logo.svg'; // Using Cardiff SVG for Royal Holloway
-const deakinLogo = '/Nottingham-logo.svg'; // Using Nottingham SVG for Deakin
-const curtinLogo = '/Birmingham-logo.svg'; // Using Birmingham SVG for Curtin
-const brunelLogo = '/brunel-logo.svg';
+// Logo paths - using direct paths for better production compatibility
+const logoImage = '/logo-200.png';
+const logoWhiteImage = '/logo-white.png';
 
-
+// University logos - Using actual SVG files from organized build structure
+const cardiffLogo = '/assets/university-logos/cardiff-logo.svg';
+const ueaLogo = '/assets/university-logos/cardiff-logo.svg'; // Using Cardiff SVG for UEA
+const nottinghamLogo = '/assets/university-logos/Nottingham-logo.svg';
+const sussexLogo = '/assets/university-logos/brunel-logo.svg'; // Using Brunel SVG for Sussex
+const birminghamLogo = '/assets/university-logos/Birmingham-logo.svg';
+const queenMaryLogo = '/assets/university-logos/brunel-logo.svg'; // Using Brunel SVG for Queen Mary
+const royalHollowayLogo = '/assets/university-logos/cardiff-logo.svg'; // Using Cardiff SVG for Royal Holloway
+const deakinLogo = '/assets/university-logos/Nottingham-logo.svg'; // Using Nottingham SVG for Deakin
+const curtinLogo = '/assets/university-logos/Birmingham-logo.svg'; // Using Birmingham SVG for Curtin
+const brunelLogo = '/assets/university-logos/brunel-logo.svg';
 
 // Logo
 export const logo = logoImage;
@@ -139,7 +135,6 @@ export const heroSliderImages = {
   hero2: heroSlider2,
   hero3: heroSlider3
 };
-
 
 // University recommendation images
 export const universityImages = {
@@ -209,7 +204,6 @@ export const guidanceImages = {
   guidance: guidanceImage
 };
 
-
 // Blog page images
 export const blogImages = {
   hero: blogHeroImage,
@@ -222,4 +216,3 @@ export const blogImages = {
     'choosing-right-study-destination': studyDestinationImage,
   }
 };
-
