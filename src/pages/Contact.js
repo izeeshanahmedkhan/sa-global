@@ -212,17 +212,22 @@ This inquiry was submitted through the SA Global website contact form.
                 <h3 className="text-2xl font-bold text-navy-900 mb-6">Get in Touch</h3>
                 
                 <div className="space-y-6">
-                  {/* Phone section commented out - will be updated later */}
-                  {/* <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <span className="text-primary-600 text-xl">📞</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-navy-900 mb-1">Phone</h4>
-                      <p className="text-gray-600">{content.contactInfo.phone}</p>
-                      <p className="text-gray-600">{content.contactInfo.phone2}</p>
+                      <p className="text-gray-600">
+                        <a 
+                          href={`tel:${content.contactInfo.phone}`}
+                          className="hover:text-primary-600 transition-colors duration-300 hover:underline"
+                        >
+                          {content.contactInfo.phone}
+                        </a>
+                      </p>
                     </div>
-                  </div> */}
+                  </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">

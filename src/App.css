@@ -1,14 +1,19 @@
 /* Tailwind CSS directives */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind utilities;
 
 /* Custom styles for SA Global */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* Custom component styles */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @layer components {
   .btn {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer;
   }
 
