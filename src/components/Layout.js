@@ -28,11 +28,15 @@ const Layout = ({ children }) => {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm space-y-1 sm:space-y-0">
             <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-4 lg:space-x-6">
-              {/* Phone number commented out - will be updated later */}
-              {/* <span className="flex items-center space-x-2 text-white font-medium">
+              <span className="flex items-center space-x-2 text-white font-medium">
                 <span>📞</span>
-                <span className="text-xs sm:text-sm">{content.contactInfo.phone}</span>
-              </span> */}
+                <a 
+                  href={`tel:${content.contactInfo.phone}`}
+                  className="text-xs sm:text-sm hover:underline transition-colors duration-300"
+                >
+                  {content.contactInfo.phone}
+                </a>
+              </span>
               <span className="flex items-center space-x-2 text-white font-medium">
                 <span>✉️</span>
                 <a 
@@ -370,7 +374,14 @@ const Layout = ({ children }) => {
             <div className="text-center md:text-left">
               <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
               <div className="space-y-2 text-gray-200">
-                {/* <p className="break-words">{content.contactInfo.phone}</p> */}
+                <p className="break-words">
+                  <a 
+                    href={`tel:${content.contactInfo.phone}`}
+                    className="text-gray-200 hover:text-white transition-colors duration-300 hover:underline"
+                  >
+                    {content.contactInfo.phone}
+                  </a>
+                </p>
                 <p className="break-words">
                   <a 
                     href={`mailto:${content.contactInfo.email}`}

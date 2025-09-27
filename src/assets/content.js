@@ -13,8 +13,7 @@ export const content = {
   },
 
   contactInfo: {
-    // phone: "+1 (555) 123-4567",
-    // phone2: "+1 (555) 987-6543",
+    phone: "0321 2307818",
     email: "info@saglobal.com",
     email2: "support@saglobal.com",
     address: "Gulshan-e-Iqbal, Karachi",
