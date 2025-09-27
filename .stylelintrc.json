@@ -20,6 +20,10 @@
         "ignoreProperties": ["scroll-behavior"]
       }
     ],
-    "no-browser-hacks": null
+    "no-browser-hacks": null,
+    "property-no-vendor-prefix": null,
+    "at-rule-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null
   }
 }

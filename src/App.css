@@ -1,35 +1,45 @@
 /* Tailwind CSS directives */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind utilities;
 
 /* Custom styles for SA Global */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* Custom component styles */
+/* stylelint-disable-next-line at-rule-no-unknown */
 @layer components {
   .btn {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer;
   }
 
   .btn-primary {
     background: #0A1E3E; /* Fallback for older browsers */
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 focus:ring-primary-500 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105;
   }
 
   .btn-secondary {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-white text-primary-600 border-2 border-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500 shadow-md hover:shadow-lg transform hover:-translate-y-1;
   }
 
   .btn-outline {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-transparent text-navy-900 border-2 border-navy-900 hover:bg-navy-900 hover:text-white focus:ring-navy-500 shadow-md hover:shadow-lg transform hover:-translate-y-1;
   }
 
   .btn-white {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply bg-white text-primary-600 border-2 border-white hover:bg-transparent hover:text-white focus:ring-white shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105;
   }
 
   .hover-glow {
+    /* stylelint-disable-next-line at-rule-no-unknown */
     @apply hover:shadow-[0_0_30px_rgba(255,255,255,0.3)];
   }
 
