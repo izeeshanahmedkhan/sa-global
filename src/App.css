@@ -13,7 +13,8 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 focus:ring-primary-500 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105;
+    background: #0A1E3E; /* Fallback for older browsers */
+  @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 focus:ring-primary-500 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105;
   }
 
   .btn-secondary {
@@ -97,7 +98,8 @@
   }
 
   .hero-gradient {
-    @apply bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700;
+    background: #0A1E3E; /* Fallback for older browsers */
+  @apply bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700;
   }
 
   .section-padding {
@@ -109,7 +111,8 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+    background: #0A1E3E; /* Fallback for older browsers */
+  @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
   }
 
   /* Animation utilities */

@@ -80,9 +80,9 @@ const Contact = () => {
 
     try {
       // EmailJS configuration
-      const serviceId = 'service_gmail'; // Replace with your EmailJS service ID
-      const templateId = 'template_saglobal'; // Replace with your EmailJS template ID
-      const publicKey = 'Y6ZeHuxrzkxYGjCm3YTX'; // Your EmailJS public key
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_gmail';
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_saglobal';
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'Y6ZeHuxrzkxYGjCm3YTX';
 
       // Prepare email template parameters
       const templateParams = {

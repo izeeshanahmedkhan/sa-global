@@ -17,12 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/organize-build.js",
-    "build:clean": "react-scripts build",
-    "build:production": "GENERATE_SOURCEMAP=false react-scripts build && node scripts/organize-build.js",
-    "organize": "node scripts/organize-build.js",
-    "organize:powershell": "powershell -ExecutionPolicy Bypass -File scripts/organize-build.ps1",
-    "build:structure": "node scripts/show-build-structure.js",
+    "build": "react-scripts build",
+    "build:production": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build -l 3000"
