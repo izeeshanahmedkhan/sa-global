@@ -17,7 +17,78 @@ A modern, responsive website for SA Global Study Abroad Consultant services.
 - **Routing**: React Router DOM 7.9.1
 - **Styling**: Tailwind CSS 3.4.17
 - **Build Tool**: Create React App
-- **Email Service**: EmailJS
+- **Email Service**: EmailJS 4.4.1
+
+## EmailJS Configuration
+
+This project uses EmailJS for handling contact form submissions. Follow these steps to set it up:
+
+### 1. Create an EmailJS Account
+
+1. Go to [EmailJS](https://www.emailjs.com/)
+2. Sign up for a free account
+3. Verify your email address
+
+### 2. Set Up Email Service
+
+1. Go to **Email Services** in the dashboard
+2. Click **Add New Service**
+3. Choose your email provider (Gmail, Outlook, etc.)
+4. Follow the setup wizard
+5. Copy your **Service ID** (e.g., `service_6iaqh1h`)
+
+### 3. Create Email Template
+
+1. Go to **Email Templates** in the dashboard
+2. Click **Create New Template**
+3. Set the **Subject**: `New Student Inquiry - {{from_name}}`
+4. Switch to **Code Editor** mode
+5. Use the HTML template provided (see `.env.example` for structure)
+6. Include these variables in your template:
+   - `{{from_name}}` - Student's name
+   - `{{from_email}}` - Student's email
+   - `{{phone}}` - Phone number
+   - `{{dob}}` - Date of birth
+   - `{{city}}` - City
+   - `{{nationality}}` - Nationality
+   - `{{qualification}}` - Academic qualification
+   - `{{grade_cgpa}}` - Grades/CGPA/Percentage
+   - `{{english_test}}` - English language test status
+   - `{{country_preference}}` - Preferred study country
+   - `{{preferred_course}}` - Preferred course
+   - `{{query}}` - Additional query/message
+7. Save and copy your **Template ID** (e.g., `template_wgpnprz`)
+
+### 4. Get Public Key
+
+1. Go to **Account** → **General**
+2. Copy your **Public Key** (e.g., `J6sCZb4-rkfiZHR04`)
+
+### 5. Configure Environment Variables
+
+Create a `.env` file in the project root (use `.env.example` as a template):
+
+```env
+REACT_APP_EMAILJS_SERVICE_ID=service_6iaqh1h
+REACT_APP_EMAILJS_TEMPLATE_ID=template_wgpnprz
+REACT_APP_EMAILJS_PUBLIC_KEY=J6sCZb4-rkfiZHR04
+REACT_APP_RECIPIENT_EMAIL=noreply@saglobal.org
+```
+
+**⚠️ Important**: Never commit the `.env` file to version control. It's already in `.gitignore`.
+
+### 6. Test the Contact Form
+
+1. Start the development server: `npm start`
+2. Navigate to the Contact page
+3. Fill out the form and submit
+4. Check your recipient email for the inquiry
+
+### EmailJS Pricing
+
+- **Free Tier**: 200 emails/month
+- **Paid Plans**: Available for higher volume needs
+- See [EmailJS Pricing](https://www.emailjs.com/pricing/) for details
 
 ## Getting Started
 
@@ -39,12 +110,24 @@ cd sa-global
 npm install
 ```
 
-3. Start development server
+3. Set up environment variables
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env and add your EmailJS credentials
+# REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+# REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+# REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+# REACT_APP_RECIPIENT_EMAIL=your_email@example.com
+```
+
+4. Start development server
 ```bash
 npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Production Build
 

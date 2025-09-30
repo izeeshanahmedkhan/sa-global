@@ -22,10 +22,14 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init('Y6ZeHuxrzkxYGjCm3YTX');
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
   }, []);
 
   const validate = () => {
@@ -80,13 +84,28 @@ const Contact = () => {
 
     try {
       // EmailJS configuration
-      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_gmail';
-      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_saglobal';
-      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'Y6ZeHuxrzkxYGjCm3YTX';
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+      const recipientEmail = process.env.REACT_APP_RECIPIENT_EMAIL || 'noreply@saglobal.org';
+
+      // Debug: Log configuration (remove in production)
+      console.log('EmailJS Configuration:', {
+        serviceId: serviceId ? '✓ Set' : '✗ Missing',
+        templateId: templateId ? '✓ Set' : '✗ Missing',
+        publicKey: publicKey ? '✓ Set' : '✗ Missing',
+        recipientEmail
+      });
+
+      // Validate EmailJS configuration
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your .env file.');
+      }
 
       // Prepare email template parameters
       const templateParams = {
         to_email: 'info@saglobal.org',
+        cc_email: 'noreply@saglobal.org, sayahya846@gmail.com',
         from_name: formData.name,
         from_email: formData.email || 'noreply@saglobal.org',
         phone: formData.phoneNumber,
@@ -132,6 +151,7 @@ This inquiry was submitted through the SA Global website contact form.
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
       setSubmitStatus('success');
+      setShowSuccessModal(true);
       
       // Reset form
       setFormData({
@@ -145,6 +165,11 @@ This inquiry was submitted through the SA Global website contact form.
     } catch (error) {
       console.error('Error sending email:', error);
       setSubmitStatus('error');
+      
+      // Set specific error message for debugging
+      setErrors({
+        general: error.message || 'An unexpected error occurred. Please try again.'
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -169,6 +194,66 @@ This inquiry was submitted through the SA Global website contact form.
 
   return (
     <div>
+      {/* Success Modal Popup */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            {/* Background overlay */}
+            <div 
+              className="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity"
+              onClick={() => setShowSuccessModal(false)}
+            ></div>
+
+            {/* Center modal */}
+            <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+
+            {/* Modal content */}
+            <div className="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full animate-fade-in-up">
+              {/* Success Icon with Animation */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 px-6 pt-8 pb-6">
+                <div className="flex justify-center">
+                  <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center animate-bounce-once shadow-lg">
+                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="px-8 py-6">
+                <h3 className="text-3xl font-bold text-gray-900 text-center mb-3">
+                  🎉 Success!
+                </h3>
+                <p className="text-lg text-gray-700 text-center mb-4">
+                  Your inquiry has been submitted successfully!
+                </p>
+                <p className="text-sm text-gray-600 text-center mb-6">
+                  Our team will review your information and get back to you within <strong>24 hours</strong>.
+                </p>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => setShowSuccessModal(false)}
+                    className="flex-1 btn btn-primary hover-glow"
+                  >
+                    Got it, thanks!
+                  </button>
+                  <Link
+                    to="/"
+                    className="flex-1 btn bg-gray-100 text-gray-700 hover:bg-gray-200 text-center"
+                    onClick={() => setShowSuccessModal(false)}
+                  >
+                    Back to Home
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Breadcrumbs */}
       <section className="bg-gradient-to-br from-[#0A1E3E] to-[#1E3A8A] py-4">
         <div className="container-custom">
@@ -296,7 +381,7 @@ This inquiry was submitted through the SA Global website contact form.
               <div>
                 <h3 className="text-green-800 font-semibold">Inquiry Submitted Successfully!</h3>
                 <p className="text-green-700 text-sm">Thank you for your interest. We'll get back to you within 24 hours.</p>
-                <p className="text-green-600 text-xs mt-1">A confirmation email has been sent to info@saglobal.org</p>
+                <p className="text-green-600 text-xs mt-1">Confirmation emails have been sent to info@saglobal.org, noreply@saglobal.org, and sayahya846@gmail.com</p>
               </div>
             </div>
           </div>

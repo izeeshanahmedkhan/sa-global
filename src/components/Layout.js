@@ -57,14 +57,14 @@ const Layout = ({ children }) => {
       {/* Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20 sm:h-24 lg:h-28">
             {/* Logo */}
             <div className="logo flex-shrink-0 flex items-center justify-center h-full">
               <Link to="/" className="text-decoration-none flex items-center justify-center h-full" onClick={closeMobileMenu}>
                 <img 
                   src={logo} 
                   alt="SA Global Logo" 
-                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain pt-1"
+                  className="h-16 sm:h-20 lg:h-24 w-auto object-contain pt-1"
                   style={{
                     objectFit: 'contain',
                     objectPosition: 'center',
