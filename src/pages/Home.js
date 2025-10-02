@@ -589,38 +589,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="bg-gray-100 py-16 lg:py-20">
-        <div className="container-custom">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
-              {content.home.testimonials.title}
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              {content.home.testimonials.subtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.home.testimonials.items.map((testimonial, index) => (
-              <div key={index} className="card p-6 lg:p-8 text-center hover-lift animate-fade-in-up stagger-2">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
-                  ))}
-                </div>
-                <blockquote className="text-gray-700 italic mb-6 leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-                <div className="border-t pt-4">
-                  <div className="font-bold text-navy-900 mb-1">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.university}</div>
-                  <div className="text-sm text-primary-600">{testimonial.country}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Blog Preview Section */}
       <section className="py-16 lg:py-20">

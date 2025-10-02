@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { content } from '../assets/content';
-import { aboutImages, teamImages } from '../assets/imageLinks';
+import { aboutImages } from '../assets/imageLinks';
 
 const About = () => {
   return (
@@ -154,41 +154,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
-              {content.about.team.title}
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              {content.about.team.subtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.about.team.members.map((member, index) => (
-              <div key={index} className="card p-6 text-center hover-lift animate-fade-in-up stagger-2">
-                <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                  <img 
-                    src={teamImages[member.image]} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-navy-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-primary-600 font-semibold mb-3">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {member.bio}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

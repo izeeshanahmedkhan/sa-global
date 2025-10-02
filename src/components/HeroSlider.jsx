@@ -60,19 +60,14 @@ const HeroSlider = () => {
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      {slide.button1 === "Success Stories" ? (
-                        <button
-                          onClick={() => {
-                            const testimonialsSection = document.getElementById('testimonials');
-                            if (testimonialsSection) {
-                              testimonialsSection.scrollIntoView({ behavior: 'smooth' });
-                            }
-                          }}
+                      {slide.button1 === "Start Planning" ? (
+                        <Link
+                          to="/services"
                           className="btn btn-primary btn-large hover-glow"
                         >
                           {slide.button1}
-                        </button>
-                      ) : slide.button1 === "Start Planning" ? (
+                        </Link>
+                      ) : slide.button1 === "View Services" ? (
                         <Link
                           to="/services"
                           className="btn btn-primary btn-large hover-glow"

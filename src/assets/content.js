@@ -13,7 +13,7 @@ export const content = {
   },
 
   contactInfo: {
-    phone: "0321 2307818",
+    phone: "03324111224",
     email: "info@saglobal.com",
     email2: "support@saglobal.com",
     address: "Gulshan-e-Iqbal, Karachi",
@@ -40,7 +40,7 @@ export const content = {
         {
           title: "Achieve Academic Excellence",
           subtitle: "Join thousands of successful students who achieved their dreams with SA Global",
-          button1: "Success Stories",
+          button1: "View Services",
           button2: "Apply Now",
           image: "hero3"
         }
@@ -229,33 +229,6 @@ export const content = {
       ]
     },
 
-    testimonials: {
-      title: "What Our Students Say",
-      subtitle: "Hear from students who achieved their dreams with SA Global",
-      items: [
-        {
-          name: "Sarah Johnson",
-          country: "United States",
-          university: "Harvard University",
-          quote: "SA Global made my dream of studying at Harvard a reality. Their guidance was invaluable throughout the entire process.",
-          rating: 5
-        },
-        {
-          name: "Ahmed Hassan",
-          country: "United Kingdom",
-          university: "University of Oxford",
-          quote: "The team's expertise and support helped me secure admission to Oxford. I couldn't have done it without them.",
-          rating: 5
-        },
-        {
-          name: "Maria Rodriguez",
-          country: "Canada",
-          university: "University of Toronto",
-          quote: "From visa assistance to accommodation support, SA Global was there every step of the way. Highly recommended!",
-          rating: 5
-        }
-      ]
-    },
 
     blogPreview: {
       title: "Latest Articles",
@@ -494,36 +467,6 @@ export const content = {
         }
       ]
     },
-    team: {
-      title: "Meet Our Team",
-      subtitle: "Experienced professionals dedicated to your success",
-      members: [
-        {
-          name: "Sarah Johnson",
-          role: "Senior Education Consultant",
-          image: "seniorConsultant",
-          bio: "With over 8 years of experience in international education, Sarah specializes in university selection and application strategies."
-        },
-        {
-          name: "Michael Chen",
-          role: "Visa Specialist",
-          image: "visaSpecialist",
-          bio: "Michael has helped over 2000 students successfully obtain their study visas with a 98% success rate."
-        },
-        {
-          name: "Emily Rodriguez",
-          role: "University Relations Manager",
-          image: "universityRelations",
-          bio: "Emily maintains partnerships with 200+ universities worldwide and ensures smooth admission processes."
-        },
-        {
-          name: "David Thompson",
-          role: "Career Counselor",
-          image: "careerCounselor",
-          bio: "David provides career guidance and helps students align their education choices with future career goals."
-        }
-      ]
-    }
   },
 
   services: {
