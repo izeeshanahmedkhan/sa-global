@@ -1,9 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { content } from '../assets/content';
 import { flagImages } from '../assets/imageLinks';
+import UniversityModal from '../components/UniversityModal';
 
 const Universities = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
+  const openModal = (country) => {
+    setSelectedCountry(country);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedCountry(null);
+  };
+
   // Handle anchor scrolling when component mounts
   useEffect(() => {
     const hash = window.location.hash;
@@ -69,11 +83,11 @@ const Universities = () => {
                 {region.countries.map((country, countryIndex) => (
                   <div key={countryIndex} id={country.name.toLowerCase().replace(/\s+/g, '-')} className="card p-8 hover-lift animate-fade-in-up stagger-2">
                     <div className="flex items-start space-x-6">
-                      <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      <div className="w-20 h-14 rounded-xl flex-shrink-0 overflow-hidden border-2 border-gray-200 shadow-md">
                         <img 
                           src={flagImages[country.flag]} 
                           alt={`${country.name} flag`}
-                          className="w-full h-full object-cover rounded-xl"
+                          className="w-full h-full object-cover"
                         />
                       </div>
                       <div className="flex-1">
@@ -95,12 +109,12 @@ const Universities = () => {
                                       {isMoreEntry ? '→' : '•'}
                                     </span>
                                     {isMoreEntry ? (
-                                      <Link 
-                                        to="/contact" 
-                                        className="text-primary-600 font-medium italic hover:text-primary-700 hover:underline transition-colors duration-200 cursor-pointer"
+                                      <button 
+                                        onClick={() => openModal(country)} 
+                                        className="text-primary-600 font-medium italic hover:text-primary-700 hover:underline transition-colors duration-200 cursor-pointer text-left"
                                       >
                                         {university}
-                                      </Link>
+                                      </button>
                                     ) : (
                                       <span>{university}</span>
                                     )}
@@ -125,6 +139,16 @@ const Universities = () => {
           ))}
         </div>
       </section>
+
+      {/* University Modal */}
+      {selectedCountry && (
+        <UniversityModal
+          isOpen={modalOpen}
+          onClose={closeModal}
+          country={selectedCountry}
+          universities={selectedCountry.allUniversities || selectedCountry.universities}
+        />
+      )}
     </div>
   );
 };

@@ -206,6 +206,13 @@ export const content = {
           flag: "new-zealand"
         },
         {
+          name: "Australia",
+          shortName: "AU",
+          description: "Innovative education system with strong industry connections and high quality of life. Known for research excellence and beautiful campuses.",
+          icon: "🇦🇺",
+          flag: "australia"
+        },
+        {
           name: "Singapore",
           shortName: "SG",
           description: "Asian education hub with excellent universities and strong connections to global markets. Multicultural environment.",
@@ -523,6 +530,43 @@ export const content = {
               "Yale University",
               "Princeton University",
               "and 200+ more prestigious institutions"
+            ],
+            allUniversities: [
+              "Harvard University",
+              "Massachusetts Institute of Technology (MIT)",
+              "Stanford University",
+              "University of California, Berkeley",
+              "Yale University",
+              "Princeton University",
+              "Columbia University",
+              "University of Chicago",
+              "University of Pennsylvania",
+              "Northwestern University",
+              "Duke University",
+              "Johns Hopkins University",
+              "California Institute of Technology",
+              "Dartmouth College",
+              "Brown University",
+              "Vanderbilt University",
+              "Cornell University",
+              "Rice University",
+              "University of Notre Dame",
+              "University of California, Los Angeles (UCLA)",
+              "Carnegie Mellon University",
+              "Emory University",
+              "Georgetown University",
+              "University of Virginia",
+              "University of Southern California",
+              "New York University",
+              "Boston University",
+              "Northeastern University",
+              "University of Michigan",
+              "University of North Carolina at Chapel Hill",
+              "University of Washington",
+              "University of California, San Diego",
+              "University of Wisconsin-Madison",
+              "University of Illinois Urbana-Champaign",
+              "University of Texas at Austin"
             ]
           },
           {
@@ -537,6 +581,33 @@ export const content = {
               "McMaster University",
               "University of Waterloo",
               "and 50+ more top-ranked universities"
+            ],
+            allUniversities: [
+              "University of Toronto",
+              "McGill University",
+              "University of British Columbia",
+              "University of Alberta",
+              "McMaster University",
+              "University of Waterloo",
+              "Western University",
+              "Queen's University",
+              "University of Montreal",
+              "University of Calgary",
+              "Dalhousie University",
+              "University of Ottawa",
+              "Simon Fraser University",
+              "University of Victoria",
+              "York University",
+              "Carleton University",
+              "University of Saskatchewan",
+              "University of Manitoba",
+              "Concordia University",
+              "Memorial University of Newfoundland",
+              "Ryerson University",
+              "University of Guelph",
+              "University of Windsor",
+              "Brock University",
+              "Wilfrid Laurier University"
             ]
           }
         ]
@@ -556,6 +627,49 @@ export const content = {
               "University College London (UCL)",
               "King's College London",
               "and 100+ more world-class institutions"
+            ],
+            allUniversities: [
+              "University of Oxford",
+              "University of Cambridge",
+              "Imperial College London",
+              "London School of Economics (LSE)",
+              "University College London (UCL)",
+              "King's College London",
+              "University of Edinburgh",
+              "University of Manchester",
+              "University of Warwick",
+              "University of Bristol",
+              "University of Glasgow",
+              "University of Birmingham",
+              "University of Southampton",
+              "University of Leeds",
+              "University of Sheffield",
+              "Durham University",
+              "University of Nottingham",
+              "University of St Andrews",
+              "Queen Mary University of London",
+              "University of York",
+              "Lancaster University",
+              "University of Exeter",
+              "Cardiff University",
+              "University of Bath",
+              "University of Liverpool",
+              "University of Reading",
+              "University of Aberdeen",
+              "University of Sussex",
+              "Royal Holloway, University of London",
+              "Loughborough University",
+              "Newcastle University",
+              "University of Leicester",
+              "University of Surrey",
+              "University of Strathclyde",
+              "Heriot-Watt University",
+              "University of Dundee",
+              "University of East Anglia",
+              "Brunel University London",
+              "Coventry University",
+              "Swansea University",
+              "University of Kent"
             ]
           },
           {
@@ -570,12 +684,34 @@ export const content = {
               "University of Freiburg",
               "Karlsruhe Institute of Technology",
               "and 80+ more excellent universities"
+            ],
+            allUniversities: [
+              "Technical University of Munich",
+              "Heidelberg University",
+              "RWTH Aachen University",
+              "Ludwig Maximilian University of Munich",
+              "University of Freiburg",
+              "Karlsruhe Institute of Technology",
+              "Humboldt University of Berlin",
+              "Free University of Berlin",
+              "Technical University of Berlin",
+              "University of Bonn",
+              "University of Göttingen",
+              "University of Hamburg",
+              "University of Cologne",
+              "University of Mannheim",
+              "University of Tübingen",
+              "University of Erlangen-Nuremberg",
+              "University of Frankfurt",
+              "University of Stuttgart",
+              "Dresden University of Technology",
+              "University of Leipzig"
             ]
           },
           {
             name: "Ireland",
             description: "English-speaking country with excellent universities and vibrant student life.",
-            flag: "uk", // Using UK flag as placeholder since we don't have Ireland flag
+            flag: "ireland",
             universities: [
               "Trinity College Dublin",
               "University College Dublin",
@@ -584,6 +720,20 @@ export const content = {
               "Dublin City University",
               "Maynooth University",
               "and 10+ more quality institutions"
+            ],
+            allUniversities: [
+              "Trinity College Dublin",
+              "University College Dublin",
+              "National University of Ireland, Galway",
+              "University College Cork",
+              "Dublin City University",
+              "Maynooth University",
+              "University of Limerick",
+              "Technological University Dublin",
+              "Royal College of Surgeons in Ireland",
+              "National College of Ireland",
+              "Griffith College",
+              "Dublin Business School"
             ]
           }
         ]
@@ -603,6 +753,33 @@ export const content = {
               "Monash University",
               "University of New South Wales",
               "and 40+ more leading institutions"
+            ],
+            allUniversities: [
+              "University of Melbourne",
+              "Australian National University",
+              "University of Sydney",
+              "University of Queensland",
+              "Monash University",
+              "University of New South Wales",
+              "University of Western Australia",
+              "University of Adelaide",
+              "University of Technology Sydney",
+              "RMIT University",
+              "Queensland University of Technology",
+              "Curtin University",
+              "Macquarie University",
+              "Deakin University",
+              "Griffith University",
+              "University of Newcastle",
+              "University of Wollongong",
+              "La Trobe University",
+              "Swinburne University of Technology",
+              "University of South Australia",
+              "Western Sydney University",
+              "James Cook University",
+              "Flinders University",
+              "Bond University",
+              "University of Tasmania"
             ]
           },
           {
@@ -617,12 +794,28 @@ export const content = {
               "Singapore Institute of Technology",
               "Singapore University of Social Sciences",
               "and 10+ more specialized institutions"
+            ],
+            allUniversities: [
+              "National University of Singapore",
+              "Nanyang Technological University",
+              "Singapore Management University",
+              "Singapore University of Technology and Design",
+              "Singapore Institute of Technology",
+              "Singapore University of Social Sciences",
+              "James Cook University Singapore",
+              "LASALLE College of the Arts",
+              "Nanyang Academy of Fine Arts",
+              "Kaplan Higher Education Academy",
+              "PSB Academy",
+              "Singapore Institute of Management",
+              "Management Development Institute of Singapore",
+              "Curtin University Singapore"
             ]
           },
           {
             name: "New Zealand",
             description: "Beautiful country with world-class education and excellent quality of life.",
-            flag: "australia", // Using Australia flag as placeholder since we don't have New Zealand flag
+            flag: "new-zealand",
             universities: [
               "University of Auckland",
               "University of Otago",
@@ -631,6 +824,22 @@ export const content = {
               "Massey University",
               "University of Waikato",
               "and 8+ more quality institutions"
+            ],
+            allUniversities: [
+              "University of Auckland",
+              "University of Otago",
+              "University of Canterbury",
+              "Victoria University of Wellington",
+              "Massey University",
+              "University of Waikato",
+              "Lincoln University",
+              "Auckland University of Technology",
+              "Ara Institute of Canterbury",
+              "Otago Polytechnic",
+              "Unitec Institute of Technology",
+              "Waikato Institute of Technology",
+              "Manukau Institute of Technology",
+              "Eastern Institute of Technology"
             ]
           }
         ]
