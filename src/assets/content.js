@@ -673,42 +673,6 @@ export const content = {
             ]
           },
           {
-            name: "Germany",
-            description: "Free or low-cost education with world-class engineering and technical programs.",
-            flag: "germany",
-            universities: [
-              "Technical University of Munich",
-              "Heidelberg University",
-              "RWTH Aachen University",
-              "Ludwig Maximilian University of Munich",
-              "University of Freiburg",
-              "Karlsruhe Institute of Technology",
-              "and 80+ more excellent universities"
-            ],
-            allUniversities: [
-              "Technical University of Munich",
-              "Heidelberg University",
-              "RWTH Aachen University",
-              "Ludwig Maximilian University of Munich",
-              "University of Freiburg",
-              "Karlsruhe Institute of Technology",
-              "Humboldt University of Berlin",
-              "Free University of Berlin",
-              "Technical University of Berlin",
-              "University of Bonn",
-              "University of Göttingen",
-              "University of Hamburg",
-              "University of Cologne",
-              "University of Mannheim",
-              "University of Tübingen",
-              "University of Erlangen-Nuremberg",
-              "University of Frankfurt",
-              "University of Stuttgart",
-              "Dresden University of Technology",
-              "University of Leipzig"
-            ]
-          },
-          {
             name: "Ireland",
             description: "English-speaking country with excellent universities and vibrant student life.",
             flag: "ireland",
@@ -734,6 +698,75 @@ export const content = {
               "National College of Ireland",
               "Griffith College",
               "Dublin Business School"
+            ]
+          }
+        ]
+      },
+      {
+        name: "Middle East",
+        countries: [
+          {
+            name: "United Arab Emirates",
+            description: "A thriving hub of innovation and opportunity with world-class universities, modern infrastructure, and strong connections to global markets.",
+            flag: "uae",
+            universities: [
+              "American University in Dubai",
+              "American University of Sharjah",
+              "Khalifa University",
+              "United Arab Emirates University",
+              "University of Dubai",
+              "Zayed University",
+              "and 40+ more prestigious institutions"
+            ],
+            allUniversities: [
+              "American University in Dubai",
+              "American University of Sharjah",
+              "Khalifa University",
+              "United Arab Emirates University",
+              "University of Dubai",
+              "Zayed University",
+              "Abu Dhabi University",
+              "Ajman University",
+              "Al Ain University",
+              "Al Ghurair University",
+              "British University in Dubai",
+              "Canadian University Dubai",
+              "Dubai Medical College",
+              "Hamdan Bin Mohammed Smart University",
+              "Heriot-Watt University Dubai",
+              "Institute of Management Technology Dubai",
+              "Jumeira University",
+              "Middlesex University Dubai",
+              "Mohammed Bin Rashid University of Medicine and Health Sciences",
+              "Murdoch University Dubai",
+              "New York University Abu Dhabi",
+              "Paris-Sorbonne University Abu Dhabi",
+              "RAK Medical & Health Sciences University",
+              "Rochester Institute of Technology Dubai",
+              "Shaheed Zayed Bin Sultan Al Nahyan University",
+              "Sharjah University",
+              "The British University in Dubai",
+              "The University of Wollongong in Dubai",
+              "University of Birmingham Dubai",
+              "University of Bradford Dubai",
+              "University of Sharjah",
+              "University of Strathclyde Business School - Dubai",
+              "Amity University Dubai",
+              "Birla Institute of Technology & Science, Pilani - Dubai",
+              "Curtin University Dubai",
+              "Hult International Business School Dubai",
+              "Manipal University Dubai",
+              "SP Jain School of Global Management Dubai",
+              "Emirates Aviation University",
+              "Higher Colleges of Technology",
+              "Skyline University College",
+              "City University College of Ajman",
+              "Al Falah University",
+              "Emirates Institute for Banking and Financial Studies",
+              "Ras Al Khaimah Medical and Health Sciences University",
+              "Gulf Medical University",
+              "Dar Al Uloom University",
+              "American College of Dubai"
             ]
           }
         ]

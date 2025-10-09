@@ -4,6 +4,13 @@
   ],
   "hints": {
     "compat-api/html": "off",
-    "compat-api/css": "off"
+    "compat-api/css": "off",
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ],
+    "meta-viewport": "off"
   }
 }
