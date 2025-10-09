@@ -107,7 +107,7 @@ const Home = () => {
                     {country.description}
                   </p>
                   <Link 
-                    to={`/universities#${country.name === 'USA' ? 'united-states' : country.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={country.url || `/universities#${country.name === 'USA' ? 'united-states' : country.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="bg-white text-black px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 inline-block shadow-lg text-xs sm:text-sm lg:text-base"
                   >
                     Learn More

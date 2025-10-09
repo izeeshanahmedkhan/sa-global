@@ -94,49 +94,49 @@ export const content = {
           description: "High-quality education with affordable tuition and excellent post-graduation work opportunities. Known for multicultural environment and world-class universities.",
           image: "canada-landmark",
           flag: "canada",
-          url: "/universities?country=canada"
+          url: "/universities#canada"
         },
         {
           name: "USA",
           description: "Home to world-renowned universities like Harvard, MIT, and Stanford. Offers diverse programs and cutting-edge research opportunities.",
           image: "usa-landmark",
           flag: "usa",
-          url: "/universities?country=usa"
+          url: "/universities#united-states"
         },
         {
           name: "Ireland",
           description: "A welcoming destination with excellent English-language education, rich culture, and strong connections to European and global markets.",
           image: "ireland-landmark",
           flag: "ireland",
-          url: "/universities?country=ireland"
+          url: "/universities#ireland"
         },
         {
           name: "New Zealand",
           description: "Beautiful landscapes, high-quality education system, and excellent work-life balance. Known for innovative teaching methods and research.",
           image: "new-zealand-landmark",
           flag: "new-zealand",
-          url: "/universities?country=new-zealand"
+          url: "/universities#new-zealand"
         },
         {
           name: "Singapore",
           description: "Asian education hub with excellent universities and strong connections to global markets. Multicultural environment and world-class infrastructure.",
           image: "singapore-landmark",
           flag: "singapore",
-          url: "/universities?country=singapore"
+          url: "/universities#singapore"
         },
         {
           name: "United Kingdom",
           description: "Rich academic tradition with institutions like Oxford and Cambridge. Known for quality education and cultural diversity.",
           image: "uk-landmark",
           flag: "uk",
-          url: "/universities?country=uk"
+          url: "/universities#united-kingdom"
         },
         {
           name: "United Arab Emirates",
           description: "A thriving hub of innovation and opportunity with world-class universities and strong connections to global markets.",
           image: "uae-landmark",
           flag: "uae",
-          url: "/universities?country=uae"
+          url: "/universities#united-arab-emirates"
         }
       ]
     },
