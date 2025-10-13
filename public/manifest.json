@@ -1,6 +1,7 @@
 {
   "short_name": "SA Global",
-  "name": "SA Global - Educational Consultancy",
+  "name": "SA Global - Educational Consultancy | Created By Xapner.com",
+  "description": "SA Global Study Abroad Consultant - Professional Educational Services | Created By Xapner.com",
   "icons": [
     {
       "src": "favicon.ico",
@@ -31,5 +32,8 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#0A1E3E",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "categories": ["education", "consulting", "web-development"],
+  "lang": "en",
+  "dir": "ltr"
 }

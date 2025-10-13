@@ -1,7 +1,11 @@
+// SA Global Layout Component
+// Created By Xapner.com - https://xapner.com
+// Professional Web Development Services
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { content } from '../assets/content';
 import { logo, logoWhite } from '../assets/imageLinks';
+import WhatsAppButton from './WhatsAppButton';
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -333,7 +337,7 @@ const Layout = ({ children }) => {
               </div>
               <p className="text-gray-300 mb-4 text-center md:text-left">{content.siteTagline}</p>
               <div className="flex justify-center md:justify-start space-x-4">
-                <a href="https://facebook.com" className="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=61581513276667&mibextid=ZbWKwL" className="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300" target="_blank" rel="noopener noreferrer">
                   <span className="text-sm font-bold text-white">f</span>
                 </a>
                 <a href="https://twitter.com" className="w-10 h-10 bg-white bg-opacity-20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300" target="_blank" rel="noopener noreferrer">
@@ -404,6 +408,9 @@ const Layout = ({ children }) => {
         </div>
       </footer>
       </div>
+      
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </>
   );
 };

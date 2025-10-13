@@ -1,3 +1,6 @@
+// SA Global Home Page Component
+// Created By Xapner.com - https://xapner.com
+// Professional Web Development Services
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { content } from '../assets/content';

@@ -1,4 +1,6 @@
 // SA Global Content Management
+// Website Created By Xapner.com - https://xapner.com
+// Professional Web Development Services
 export const content = {
   siteName: "SA Global",
   siteTagline: "Your Gateway to Global Education",

@@ -348,7 +348,7 @@ This inquiry was submitted through the SA Global website contact form.
                   <div className="pt-4">
                     <h4 className="font-semibold text-navy-900 mb-4">Follow Us</h4>
                     <div className="flex space-x-3">
-                      <a href="https://facebook.com" className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center hover:bg-primary-700 transition-colors">
+                      <a href="https://www.facebook.com/profile.php?id=61581513276667&mibextid=ZbWKwL" className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center hover:bg-primary-700 transition-colors" target="_blank" rel="noopener noreferrer">
                         <span className="text-white text-sm font-bold">f</span>
                       </a>
                       <a href="https://twitter.com" className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center hover:bg-primary-700 transition-colors">

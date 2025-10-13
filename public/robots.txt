@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
+# SA Global Website - Created By Xapner.com
+# Professional Web Development Services
 User-agent: *
 Disallow:
+
+# Sitemap
+Sitemap: https://saglobal.org/sitemap.xml
+
+# Website Created By Xapner.com - Professional Web Development
+# Contact: https://xapner.com

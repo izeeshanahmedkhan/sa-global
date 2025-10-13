@@ -1,7 +1,11 @@
+// SA Global Post-Build Script
+// Created By Xapner.com - https://xapner.com
+// Professional Web Development Services
 const fs = require('fs');
 const path = require('path');
 
-console.log('Running post-build script...');
+console.log('Running SA Global post-build script...');
+console.log('Website Created By Xapner.com - Professional Web Development Services');
 
 // Copy .htaccess to build folder
 const htaccessSrc = path.join(__dirname, '../public/.htaccess');
