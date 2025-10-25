@@ -16,8 +16,8 @@ export const content = {
 
   contactInfo: {
     phone: "03324111224",
-    email: "info@saglobal.com",
-    email2: "support@saglobal.com",
+    email: "info@saglobal.org",
+    email2: "support@saglobal.org",
     address: "Gulshan-e-Iqbal, Karachi",
     hours: "Mon-Fri: 9AM-6PM, Sat: 10AM-4PM"
   },
